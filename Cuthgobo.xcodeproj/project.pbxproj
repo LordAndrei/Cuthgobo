@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		582D95D324E5DBAD00B79132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D95D224E5DBAD00B79132 /* AppDelegate.swift */; };
+		582D95D524E5DBAD00B79132 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 582D95D424E5DBAD00B79132 /* GameScene.sks */; };
+		582D95D724E5DBAD00B79132 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 582D95D624E5DBAD00B79132 /* Actions.sks */; };
+		582D95D924E5DBAD00B79132 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D95D824E5DBAD00B79132 /* GameScene.swift */; };
+		582D95DB24E5DBAD00B79132 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D95DA24E5DBAD00B79132 /* GameViewController.swift */; };
+		582D95DE24E5DBAD00B79132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 582D95DC24E5DBAD00B79132 /* Main.storyboard */; };
+		582D95E024E5DBAE00B79132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582D95DF24E5DBAE00B79132 /* Assets.xcassets */; };
+		582D95EB24E5DBAE00B79132 /* CuthgoboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D95EA24E5DBAE00B79132 /* CuthgoboTests.swift */; };
+		582D95F624E5DBAE00B79132 /* CuthgoboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D95F524E5DBAE00B79132 /* CuthgoboUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		582D95E724E5DBAE00B79132 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 582D95C724E5DBAD00B79132 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 582D95CE24E5DBAD00B79132;
+			remoteInfo = Cuthgobo;
+		};
+		582D95F224E5DBAE00B79132 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 582D95C724E5DBAD00B79132 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 582D95CE24E5DBAD00B79132;
+			remoteInfo = Cuthgobo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		582D95CF24E5DBAD00B79132 /* Cuthgobo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cuthgobo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		582D95D224E5DBAD00B79132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		582D95D424E5DBAD00B79132 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		582D95D624E5DBAD00B79132 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		582D95D824E5DBAD00B79132 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		582D95DA24E5DBAD00B79132 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		582D95DD24E5DBAD00B79132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		582D95DF24E5DBAE00B79132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		582D95E124E5DBAE00B79132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582D95E624E5DBAE00B79132 /* CuthgoboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuthgoboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		582D95EA24E5DBAE00B79132 /* CuthgoboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuthgoboTests.swift; sourceTree = "<group>"; };
+		582D95EC24E5DBAE00B79132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582D95F124E5DBAE00B79132 /* CuthgoboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuthgoboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		582D95F524E5DBAE00B79132 /* CuthgoboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuthgoboUITests.swift; sourceTree = "<group>"; };
+		582D95F724E5DBAE00B79132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		582D95CC24E5DBAD00B79132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582D95E324E5DBAE00B79132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582D95EE24E5DBAE00B79132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		582D95C624E5DBAD00B79132 = {
+			isa = PBXGroup;
+			children = (
+				582D95D124E5DBAD00B79132 /* Cuthgobo */,
+				582D95E924E5DBAE00B79132 /* CuthgoboTests */,
+				582D95F424E5DBAE00B79132 /* CuthgoboUITests */,
+				582D95D024E5DBAD00B79132 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		582D95D024E5DBAD00B79132 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				582D95CF24E5DBAD00B79132 /* Cuthgobo.app */,
+				582D95E624E5DBAE00B79132 /* CuthgoboTests.xctest */,
+				582D95F124E5DBAE00B79132 /* CuthgoboUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		582D95D124E5DBAD00B79132 /* Cuthgobo */ = {
+			isa = PBXGroup;
+			children = (
+				582D95D224E5DBAD00B79132 /* AppDelegate.swift */,
+				582D95D424E5DBAD00B79132 /* GameScene.sks */,
+				582D95D624E5DBAD00B79132 /* Actions.sks */,
+				582D95D824E5DBAD00B79132 /* GameScene.swift */,
+				582D95DA24E5DBAD00B79132 /* GameViewController.swift */,
+				582D95DC24E5DBAD00B79132 /* Main.storyboard */,
+				582D95DF24E5DBAE00B79132 /* Assets.xcassets */,
+				582D95E124E5DBAE00B79132 /* Info.plist */,
+			);
+			path = Cuthgobo;
+			sourceTree = "<group>";
+		};
+		582D95E924E5DBAE00B79132 /* CuthgoboTests */ = {
+			isa = PBXGroup;
+			children = (
+				582D95EA24E5DBAE00B79132 /* CuthgoboTests.swift */,
+				582D95EC24E5DBAE00B79132 /* Info.plist */,
+			);
+			path = CuthgoboTests;
+			sourceTree = "<group>";
+		};
+		582D95F424E5DBAE00B79132 /* CuthgoboUITests */ = {
+			isa = PBXGroup;
+			children = (
+				582D95F524E5DBAE00B79132 /* CuthgoboUITests.swift */,
+				582D95F724E5DBAE00B79132 /* Info.plist */,
+			);
+			path = CuthgoboUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		582D95CE24E5DBAD00B79132 /* Cuthgobo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 582D95FA24E5DBAE00B79132 /* Build configuration list for PBXNativeTarget "Cuthgobo" */;
+			buildPhases = (
+				582D95CB24E5DBAD00B79132 /* Sources */,
+				582D95CC24E5DBAD00B79132 /* Frameworks */,
+				582D95CD24E5DBAD00B79132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cuthgobo;
+			productName = Cuthgobo;
+			productReference = 582D95CF24E5DBAD00B79132 /* Cuthgobo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		582D95E524E5DBAE00B79132 /* CuthgoboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 582D95FD24E5DBAE00B79132 /* Build configuration list for PBXNativeTarget "CuthgoboTests" */;
+			buildPhases = (
+				582D95E224E5DBAE00B79132 /* Sources */,
+				582D95E324E5DBAE00B79132 /* Frameworks */,
+				582D95E424E5DBAE00B79132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				582D95E824E5DBAE00B79132 /* PBXTargetDependency */,
+			);
+			name = CuthgoboTests;
+			productName = CuthgoboTests;
+			productReference = 582D95E624E5DBAE00B79132 /* CuthgoboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		582D95F024E5DBAE00B79132 /* CuthgoboUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 582D960024E5DBAE00B79132 /* Build configuration list for PBXNativeTarget "CuthgoboUITests" */;
+			buildPhases = (
+				582D95ED24E5DBAE00B79132 /* Sources */,
+				582D95EE24E5DBAE00B79132 /* Frameworks */,
+				582D95EF24E5DBAE00B79132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				582D95F324E5DBAE00B79132 /* PBXTargetDependency */,
+			);
+			name = CuthgoboUITests;
+			productName = CuthgoboUITests;
+			productReference = 582D95F124E5DBAE00B79132 /* CuthgoboUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		582D95C724E5DBAD00B79132 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					582D95CE24E5DBAD00B79132 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					582D95E524E5DBAE00B79132 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 582D95CE24E5DBAD00B79132;
+					};
+					582D95F024E5DBAE00B79132 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 582D95CE24E5DBAD00B79132;
+					};
+				};
+			};
+			buildConfigurationList = 582D95CA24E5DBAD00B79132 /* Build configuration list for PBXProject "Cuthgobo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 582D95C624E5DBAD00B79132;
+			productRefGroup = 582D95D024E5DBAD00B79132 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				582D95CE24E5DBAD00B79132 /* Cuthgobo */,
+				582D95E524E5DBAE00B79132 /* CuthgoboTests */,
+				582D95F024E5DBAE00B79132 /* CuthgoboUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		582D95CD24E5DBAD00B79132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582D95DE24E5DBAD00B79132 /* Main.storyboard in Resources */,
+				582D95D524E5DBAD00B79132 /* GameScene.sks in Resources */,
+				582D95E024E5DBAE00B79132 /* Assets.xcassets in Resources */,
+				582D95D724E5DBAD00B79132 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582D95E424E5DBAE00B79132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582D95EF24E5DBAE00B79132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		582D95CB24E5DBAD00B79132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582D95D924E5DBAD00B79132 /* GameScene.swift in Sources */,
+				582D95DB24E5DBAD00B79132 /* GameViewController.swift in Sources */,
+				582D95D324E5DBAD00B79132 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582D95E224E5DBAE00B79132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582D95EB24E5DBAE00B79132 /* CuthgoboTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		582D95ED24E5DBAE00B79132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				582D95F624E5DBAE00B79132 /* CuthgoboUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		582D95E824E5DBAE00B79132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 582D95CE24E5DBAD00B79132 /* Cuthgobo */;
+			targetProxy = 582D95E724E5DBAE00B79132 /* PBXContainerItemProxy */;
+		};
+		582D95F324E5DBAE00B79132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 582D95CE24E5DBAD00B79132 /* Cuthgobo */;
+			targetProxy = 582D95F224E5DBAE00B79132 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		582D95DC24E5DBAD00B79132 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				582D95DD24E5DBAD00B79132 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		582D95F824E5DBAE00B79132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		582D95F924E5DBAE00B79132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		582D95FB24E5DBAE00B79132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TH6DU4UA9;
+				INFOPLIST_FILE = Cuthgobo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordandrei.labs.Cuthgobo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		582D95FC24E5DBAE00B79132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TH6DU4UA9;
+				INFOPLIST_FILE = Cuthgobo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordandrei.labs.Cuthgobo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		582D95FE24E5DBAE00B79132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TH6DU4UA9;
+				INFOPLIST_FILE = CuthgoboTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordandrei.labs.CuthgoboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cuthgobo.app/Cuthgobo";
+			};
+			name = Debug;
+		};
+		582D95FF24E5DBAE00B79132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TH6DU4UA9;
+				INFOPLIST_FILE = CuthgoboTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordandrei.labs.CuthgoboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cuthgobo.app/Cuthgobo";
+			};
+			name = Release;
+		};
+		582D960124E5DBAE00B79132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TH6DU4UA9;
+				INFOPLIST_FILE = CuthgoboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordandrei.labs.CuthgoboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cuthgobo;
+			};
+			name = Debug;
+		};
+		582D960224E5DBAE00B79132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8TH6DU4UA9;
+				INFOPLIST_FILE = CuthgoboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lordandrei.labs.CuthgoboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Cuthgobo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		582D95CA24E5DBAD00B79132 /* Build configuration list for PBXProject "Cuthgobo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582D95F824E5DBAE00B79132 /* Debug */,
+				582D95F924E5DBAE00B79132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		582D95FA24E5DBAE00B79132 /* Build configuration list for PBXNativeTarget "Cuthgobo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582D95FB24E5DBAE00B79132 /* Debug */,
+				582D95FC24E5DBAE00B79132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		582D95FD24E5DBAE00B79132 /* Build configuration list for PBXNativeTarget "CuthgoboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582D95FE24E5DBAE00B79132 /* Debug */,
+				582D95FF24E5DBAE00B79132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		582D960024E5DBAE00B79132 /* Build configuration list for PBXNativeTarget "CuthgoboUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				582D960124E5DBAE00B79132 /* Debug */,
+				582D960224E5DBAE00B79132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 582D95C724E5DBAD00B79132 /* Project object */;
+}
