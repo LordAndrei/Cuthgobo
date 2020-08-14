@@ -1,6 +1,7 @@
 //
 //  Cuthgobo.swift
 //  Cuthgobo
+//  Cuthgobo is a Cube that goes Boing
 //
 //  Created by Andrei Freeman on 8/13/20.
 //
