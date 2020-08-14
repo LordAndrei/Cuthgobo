@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+let worldMin = 0
+let worldMax = 5
+
 class Cuthgobo {
     var hunger: Float = 0.0
     var thirst: Float = 0.0
@@ -16,6 +19,7 @@ class Cuthgobo {
     var canGiveBirth: Bool = true
     
     func doSomething() {
+        /* make shure the cuthgobo cant survive by losing hunger below 0*/
         if hunger == 0 || thirst == 0 {
             die()
         }
@@ -57,10 +61,23 @@ class Cuthgobo {
         yMotion *= stepCount
         location = CGPoint(x: Int(location.x) + xMotion, y: Int(location.y) + yMotion)
         print("Now I'm at: x:\(location.x), y:\(location.y)")
-        if location.x < 0 || location.y < 0 {
+        if !isSafe() {
             print("I have fallen off the world!")
             die()
         }
+    }
+    
+    func isSafe() -> Bool {
+        let x = Int(location.x)
+        let y = Int(location.y)
+        guard x >= worldMin,
+              x <= worldMax,
+              y >= worldMin,
+              y <= worldMax
+              else {
+            return false
+        }
+        return true
     }
     
     func eat() {
