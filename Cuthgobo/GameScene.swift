@@ -49,6 +49,10 @@ class GameScene: SKScene {
             n.strokeColor = SKColor.green
             self.addChild(n)
         }
+        
+        let aCuthgobo = Cuthgobo.init()
+        aCuthgobo.beBorn(whereBorn: CGPoint(x: 2, y: 3))
+        aCuthgobo.identifyYourself()
     }
     
     func touchMoved(toPoint pos : CGPoint) {
