@@ -20,6 +20,7 @@ class Cuthgobo {
             die()
         }
     }
+    
     func beBorn(whereBorn: CGPoint) {
         hunger = 50.0
         thirst = 50.0
@@ -30,33 +31,41 @@ class Cuthgobo {
             canGiveBirth = false
         }
     }
+    
     func walk() {
         hunger += 1
         thirst += 1
         move(stepCount: 1)
-        print("i move")
+        print("I move")
     }
+    
     func jump() {
         hunger += 3
         thirst += 3
         move(stepCount: 3)
         print("BOOOOOOING")
     }
+    
     func move(stepCount:Int) {
     }
+    
     func eat() {
         hunger -= 20
-        print ("nom nom now i am only \(hunger)% hungry")
+        print ("nom nom, now I am only \(hunger)% hungry")
     }
+    
     func drink() {
         thirst -= 20
-        print ("slurp now i am only \(thirst)% thirsty")
+        print ("slurp, now I am only \(thirst)% thirsty")
     }
+    
     func look() {}
     func reproduce() {}
+    
     func die() {
         print("I AM DEAD")
     }
+    
     func identifyYourself() {
         print("Hi, I am a Cuthgobo!")
         print("I am \(hunger)% hungry")
