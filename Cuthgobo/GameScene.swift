@@ -53,6 +53,9 @@ class GameScene: SKScene {
         let aCuthgobo = Cuthgobo.init()
         aCuthgobo.beBorn(whereBorn: CGPoint(x: 2, y: 3))
         aCuthgobo.identifyYourself()
+        aCuthgobo.walk()
+        aCuthgobo.jump()
+        aCuthgobo.identifyYourself()
     }
     
     func touchMoved(toPoint pos : CGPoint) {

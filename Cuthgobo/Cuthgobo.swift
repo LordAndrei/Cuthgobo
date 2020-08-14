@@ -26,7 +26,7 @@ class Cuthgobo {
         thirst = 50.0
         reproUrge = 0.0
         location = whereBorn
-        let birthable = Int(Date.timeIntervalSinceReferenceDate)
+        let birthable = Int(Date.timeIntervalSinceReferenceDate * 1000)
         if birthable % 2 == 0 {
             canGiveBirth = false
         }
@@ -35,18 +35,32 @@ class Cuthgobo {
     func walk() {
         hunger += 1
         thirst += 1
+        print("I walk")
         move(stepCount: 1)
-        print("I move")
     }
     
     func jump() {
         hunger += 3
         thirst += 3
-        move(stepCount: 3)
         print("BOOOOOOING")
+        move(stepCount: 3)
     }
     
     func move(stepCount:Int) {
+        print("I was at: x:\(location.x), y:\(location.y)")
+        var xMotion = 0 ; var yMotion = 0
+        repeat {
+            xMotion = Int(arc4random() % 3) - 1
+            yMotion = Int(arc4random() % 3) - 1
+        } while xMotion == 0 && yMotion == 0
+        xMotion *= stepCount
+        yMotion *= stepCount
+        location = CGPoint(x: Int(location.x) + xMotion, y: Int(location.y) + yMotion)
+        print("Now I'm at: x:\(location.x), y:\(location.y)")
+        if location.x < 0 || location.y < 0 {
+            print("I have fallen off the world!")
+            die()
+        }
     }
     
     func eat() {
@@ -71,7 +85,7 @@ class Cuthgobo {
         print("I am \(hunger)% hungry")
         print("I am \(thirst)% thirsty")
         print("I am \(reproUrge)% in need of a mate")
-        print("I am at x:\(location.x), y:\(location.y), ")
-        print("I can\(canGiveBirth ? "" : " not") give birth")
+        print("I am at x:\(location.x), y:\(location.y)")
+        print("I can\(canGiveBirth ? "" : " not") give birth\r\r")
     }
 }
