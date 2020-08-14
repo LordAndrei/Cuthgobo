@@ -16,6 +16,7 @@
 		582D95E024E5DBAE00B79132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 582D95DF24E5DBAE00B79132 /* Assets.xcassets */; };
 		582D95EB24E5DBAE00B79132 /* CuthgoboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D95EA24E5DBAE00B79132 /* CuthgoboTests.swift */; };
 		582D95F624E5DBAE00B79132 /* CuthgoboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D95F524E5DBAE00B79132 /* CuthgoboUITests.swift */; };
+		582D960424E5DCDB00B79132 /* Cuthgobo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D960324E5DCDB00B79132 /* Cuthgobo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		582D95F124E5DBAE00B79132 /* CuthgoboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CuthgoboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		582D95F524E5DBAE00B79132 /* CuthgoboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuthgoboUITests.swift; sourceTree = "<group>"; };
 		582D95F724E5DBAE00B79132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		582D960324E5DCDB00B79132 /* Cuthgobo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuthgobo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				582D95D624E5DBAD00B79132 /* Actions.sks */,
 				582D95D824E5DBAD00B79132 /* GameScene.swift */,
 				582D95DA24E5DBAD00B79132 /* GameViewController.swift */,
+				582D960324E5DCDB00B79132 /* Cuthgobo.swift */,
 				582D95DC24E5DBAD00B79132 /* Main.storyboard */,
 				582D95DF24E5DBAE00B79132 /* Assets.xcassets */,
 				582D95E124E5DBAE00B79132 /* Info.plist */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582D960424E5DCDB00B79132 /* Cuthgobo.swift in Sources */,
 				582D95D924E5DBAD00B79132 /* GameScene.swift in Sources */,
 				582D95DB24E5DBAD00B79132 /* GameViewController.swift in Sources */,
 				582D95D324E5DBAD00B79132 /* AppDelegate.swift in Sources */,
