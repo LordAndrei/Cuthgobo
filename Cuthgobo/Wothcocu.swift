@@ -23,11 +23,14 @@ class Wothcocu {
     var turn = 0
     
     var beings: [Cuthgobo] = []
+    var food: [Localizable] = []
+    var water: [Localizable] = []
     var population: [NSIndexPath: [WorldItems]] = [:]
     // Focumu: Food Cuthgobo Munch
-    // Wacusi: Water Cuthgono Sip
+    // Wacusi: Water Cuthgobo Sip
     
     func beBorn() {
+        createLand()
         createWater()
         for _ in 1...10 {
             growNewFood()
@@ -44,8 +47,41 @@ class Wothcocu {
         }
     }
     
-    func createWater() {}
-    func growNewFood() {}
+    func createLand() {
+        for x in minSize..<maxSize {
+            for y in minSize..<maxSize {
+                let anIndexPath = NSIndexPath(row: x, section: y)
+                population[anIndexPath] = []
+            }
+        }
+    }
+    
+    func createWater() {
+        let (x,y) = getLocation()
+        let aLocation = CGPoint(x: x, y: y)
+        let aWacusi = Wacusi(location: aLocation)
+        let anIndexPath = NSIndexPath(row: x, section: y)
+        water.append(aWacusi)
+        if population[anIndexPath] == nil {
+            population[anIndexPath] = [.wacusi]
+        } else {
+            population[anIndexPath]!.append(.wacusi)
+        }
+    }
+    
+    func growNewFood() {
+        let (x,y) = getLocation()
+        let aLocation = CGPoint(x: x, y: y)
+        let anIndexPath = NSIndexPath(row: x, section: y)
+        let aFocumu = Focumu(location: aLocation)
+        food.append(aFocumu)
+        guard population[anIndexPath] != nil else {
+            population[anIndexPath] = [.focumu]
+            return
+        }
+        population[anIndexPath]!.append(.focumu)
+        
+    }
     
     func createBeings() {
         for _ in 1...initialBeings {
@@ -54,6 +90,7 @@ class Wothcocu {
             let anIndexPath = NSIndexPath(row: x, section: y)
             let aCuthgobo = Cuthgobo.init()
             aCuthgobo.beBorn(whereBorn: aLocation)
+            beings.append(aCuthgobo)
             population[anIndexPath] = [.cuthgobo]
         }
     }
