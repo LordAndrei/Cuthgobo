@@ -35,11 +35,12 @@ class Cuthgobo {
         thirst = 50.0
         reproUrge = 0.0
         location = whereBorn
-        let birthable = Int(Date.timeIntervalSinceReferenceDate * 1000)
+        let birthable = Int(arc4random())
         if birthable % 2 == 0 {
             canGiveBirth = false
         }
         nameMe()
+        identifyYourself()
     }
     
     func nameMe() {
