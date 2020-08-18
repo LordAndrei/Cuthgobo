@@ -31,7 +31,9 @@ class Wothcocu {
     
     func beBorn() {
         createLand()
+        for _ in 1...3 {
         createWater()
+        }
         for _ in 1...10 {
             growNewFood()
         }
@@ -66,6 +68,42 @@ class Wothcocu {
             population[anIndexPath] = [.wacusi]
         } else {
             population[anIndexPath]!.append(.wacusi)
+        }
+        for xShift in -1...1 {
+            for yShift in -1...1 {
+                if x == 0 && y == 0 {
+                    continue
+                }
+                if Int(arc4random()) % 3 == 0 {
+                    continue
+                } 
+                if x + xShift < minSize{
+                    continue
+                }
+                if y + yShift < minSize{
+                    continue
+                }
+                if x + xShift >= maxSize{
+                    continue
+                }
+                if y + yShift >= maxSize{
+                    continue
+                }
+                let aLocation = CGPoint (x: x + xShift,
+                                         y: y + yShift)
+                let aWacusi = Wacusi(location: aLocation)
+                
+                let anIndexPath = NSIndexPath(row: x + xShift,
+                                              section: y + yShift)
+                water.append(aWacusi)
+                
+                if population[anIndexPath] == nil {
+                    population[anIndexPath] = [.wacusi]
+                } else {
+                    population[anIndexPath]!.append(.wacusi)
+                }
+                
+            }
         }
     }
     
