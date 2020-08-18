@@ -17,3 +17,15 @@ public protocol Localizable {
 public protocol Movable: Localizable {
     func move()
 }
+
+struct Focumu: Localizable {
+    var location: CGPoint
+    var canMove = false
+    var itemType: WorldItems = .focumu
+}
+
+struct Wacusi: Localizable {
+    var location: CGPoint
+    var canMove = false
+    var itemType: WorldItems = .wacusi
+}
