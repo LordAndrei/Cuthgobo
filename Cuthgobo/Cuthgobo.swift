@@ -13,20 +13,24 @@ let worldMin = 0
 let worldMax = 5
 
 class Cuthgobo {
+    var name: String = "Unnamed"
     var hunger: Float = 0.0
     var thirst: Float = 0.0
     var reproUrge: Float = 0.0
     var location: CGPoint = .zero
     var canGiveBirth: Bool = true
+    var alive: Bool = false
+    weak var wothcocu: Wothcocu?
     
     func doSomething() {
-        /* make shure the cuthgobo cant survive by losing hunger below 0*/
-        if hunger == 0 || thirst == 0 {
+        guard alive else { return }
+        if hunger <= 0 || thirst <= 0 {
             die()
         }
     }
     
     func beBorn(whereBorn: CGPoint) {
+        alive = true
         hunger = 50.0
         thirst = 50.0
         reproUrge = 0.0
@@ -35,6 +39,29 @@ class Cuthgobo {
         if birthable % 2 == 0 {
             canGiveBirth = false
         }
+        nameMe()
+    }
+    
+    func nameMe() {
+        let consonant = "BCDFGHJKLMNPRSTVWZ"
+        let vowel = "AEIOUY"
+        name = ""
+        
+        var random = Int(arc4random()) % consonant.count
+        var index = consonant.index(consonant.startIndex, offsetBy: random)
+        name += consonant[index...index]
+        
+        random = Int(arc4random()) % vowel.count
+        index = vowel.index(consonant.startIndex, offsetBy: random)
+        name += vowel[index...index]
+        
+        random = Int(arc4random()) % consonant.count
+        index = consonant.index(consonant.startIndex, offsetBy: random)
+        name += consonant[index...index]
+        
+        name += "\(Int(arc4random()) % 10)"
+        name += "\(Int(arc4random()) % 10)"
+        name += "\(Int(arc4random()) % 10)"
     }
     
     func walk() {
@@ -96,14 +123,18 @@ class Cuthgobo {
     
     func die() {
         print("I AM DEAD")
+        alive = false
     }
     
     func identifyYourself() {
-        print("Hi, I am a Cuthgobo!")
-        print("I am \(hunger)% hungry")
-        print("I am \(thirst)% thirsty")
-        print("I am \(reproUrge)% in need of a mate")
-        print("I am at x:\(location.x), y:\(location.y)")
-        print("I can\(canGiveBirth ? "" : " not") give birth\r\r")
+        if alive {
+            print("Hi, I am a Cuthgobo!")
+            print("My name is \(name)")
+            print("I am \(hunger)% hungry")
+            print("I am \(thirst)% thirsty")
+            print("I am \(reproUrge)% in need of a mate")
+            print("I am at x:\(location.x), y:\(location.y)")
+            print("I can\(canGiveBirth ? "" : " not") give birth\r\r")
+        }
     }
 }
