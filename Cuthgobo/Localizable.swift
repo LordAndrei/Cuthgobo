@@ -11,6 +11,7 @@ import UIKit
 public protocol Localizable {
     var location: CGPoint {get set}
     var canMove: Bool {get set}
+    var itemType: WorldItems {get}
 }
 
 public protocol Movable: Localizable {
