@@ -50,12 +50,12 @@ class GameScene: SKScene {
             self.addChild(n)
         }
         
-        let aCuthgobo = Cuthgobo.init()
-        aCuthgobo.beBorn(whereBorn: CGPoint(x: 3, y: 3))
-        aCuthgobo.identifyYourself()
-        aCuthgobo.walk()
-        aCuthgobo.jump()
-        aCuthgobo.identifyYourself()
+//        let aCuthgobo = Cuthgobo.init()
+//        aCuthgobo.beBorn(whereBorn: CGPoint(x: 3, y: 3))
+//        aCuthgobo.walk()
+//        aCuthgobo.jump()
+        let aWothcocu = Wothcocu.init()
+        aWothcocu.beBorn()
     }
     
     func touchMoved(toPoint pos : CGPoint) {
