@@ -69,17 +69,17 @@ class Cuthgobo {
         hunger += 1
         thirst += 1
         print("I walk")
-        move(stepCount: 1)
+        moveRandomly(stepCount: 1)
     }
     
     func jump() {
         hunger += 3
         thirst += 3
         print("BOOOOOOING")
-        move(stepCount: 3)
+        moveRandomly(stepCount: 3)
     }
     
-    func move(stepCount:Int) {
+    func moveRandomly(stepCount:Int) {
         print("I was at: x:\(location.x), y:\(location.y)")
         var xMotion = 0 ; var yMotion = 0
         repeat {
