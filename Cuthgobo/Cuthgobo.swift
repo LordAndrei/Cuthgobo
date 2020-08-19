@@ -27,6 +27,13 @@ class Cuthgobo {
         if hunger <= 0 || thirst <= 0 {
             die()
         }
+        // for now we're randomly going to walk or 1 in 4 chance jump.
+        let random = Int(arc4random()) % 4
+        if random != 0 {
+            walk()
+        } else {
+            jump()
+        }
     }
     
     func beBorn(whereBorn: CGPoint) {
