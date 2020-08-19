@@ -30,7 +30,7 @@ class Wothcocu {
     // Wacusi: Water Cuthgobo Sip
     
     func beBorn() {
-        createLand()
+        clearLand()
         for _ in 1...3 {
         createWater()
         }
@@ -47,13 +47,42 @@ class Wothcocu {
         for being in beings {
             being.doSomething()
         }
+        updateLand()
+        printWorld()
     }
     
-    func createLand() {
+    func clearLand() {
         for x in minSize..<maxSize {
             for y in minSize..<maxSize {
                 let anIndexPath = NSIndexPath(row: x, section: y)
                 population[anIndexPath] = []
+            }
+        }
+    }
+    
+    func updateLand() {
+        clearLand()
+        for edible in food {
+            let anIndexPath = NSIndexPath(row: Int(edible.location.x),
+                                          section: Int(edible.location.y))
+            population[anIndexPath] = [.focumu]
+        }
+        for drinkable in water {
+            let anIndexPath = NSIndexPath(row: Int(drinkable.location.x),
+                                          section: Int(drinkable.location.y))
+            if population[anIndexPath] == nil {
+                population[anIndexPath] = [.wacusi]
+            } else {
+                population[anIndexPath]!.append(.wacusi)
+            }
+        }
+        for cuthgobo in beings {
+            let anIndexPath = NSIndexPath(row: Int(cuthgobo.location.x),
+                                          section: Int(cuthgobo.location.y))
+            if population[anIndexPath] == nil {
+                population[anIndexPath] = [.cuthgobo]
+            } else {
+                population[anIndexPath]!.append(.cuthgobo)
             }
         }
     }
@@ -128,6 +157,7 @@ class Wothcocu {
             let anIndexPath = NSIndexPath(row: x, section: y)
             let aCuthgobo = Cuthgobo.init()
             aCuthgobo.beBorn(whereBorn: aLocation)
+            aCuthgobo.wothcocu = self
             beings.append(aCuthgobo)
             population[anIndexPath] = [.cuthgobo]
         }
