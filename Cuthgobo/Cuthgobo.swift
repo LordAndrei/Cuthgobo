@@ -30,9 +30,9 @@ class Cuthgobo {
         // for now we're randomly going to walk or 1 in 4 chance jump.
         let random = Int(arc4random()) % 4
         if random != 0 {
-            walk()
+            walkRandomly()
         } else {
-            jump()
+            jumpRandomly()
         }
     }
     
@@ -71,15 +71,16 @@ class Cuthgobo {
         name += "\(Int(arc4random()) % 10)"
         name += "\(Int(arc4random()) % 10)"
     }
-    
-    func walk() {
+
+    // MARK: - Movement
+    func walkRandomly() {
         hunger += 1
         thirst += 1
         print("I walk")
         moveRandomly(stepCount: 1)
     }
     
-    func jump() {
+    func jumpRandomly() {
         hunger += 3
         thirst += 3
         print("BOOOOOOING")
@@ -87,12 +88,27 @@ class Cuthgobo {
     }
     
     func moveRandomly(stepCount:Int) {
-        print("I was at: x:\(location.x), y:\(location.y)")
         var xMotion = 0 ; var yMotion = 0
         repeat {
             xMotion = Int(arc4random() % 3) - 1
             yMotion = Int(arc4random() % 3) - 1
         } while xMotion == 0 && yMotion == 0
+        move(stepCount: stepCount, xDirection: xMotion, yDirection: yMotion)
+    }
+    
+    func move(stepCount: Int, xDirection: Int, yDirection: Int) {
+        guard xDirection >= -1,
+              xDirection <= 1,
+              yDirection >= -1,
+              yDirection <= 1 else {
+            print("Error: Can not move in direction: (\(xDirection),\(yDirection))")
+            return
+        }
+        
+        print("I was at: x:\(location.x), y:\(location.y)")
+        print("I'm moving \(stepCount) spaces in direction (\(xDirection),\(yDirection))")
+        var xMotion = xDirection
+        var yMotion = yDirection
         xMotion *= stepCount
         yMotion *= stepCount
         location = CGPoint(x: Int(location.x) + xMotion, y: Int(location.y) + yMotion)
