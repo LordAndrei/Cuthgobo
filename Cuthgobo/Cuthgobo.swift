@@ -12,12 +12,16 @@ import UIKit
 let worldMin = 0
 let worldMax = 5
 
-class Cuthgobo {
+class Cuthgobo: Movable {
+    // MARK: - Localizable
+    var canMove = true
+    var itemType: WorldItems = .cuthgobo
+    var location: CGPoint = .zero
+
     var name: String = "Unnamed"
     var hunger: Float = 0.0
     var thirst: Float = 0.0
     var reproUrge: Float = 0.0
-    var location: CGPoint = .zero
     var canGiveBirth: Bool = true
     var alive: Bool = false
     weak var wothcocu: Wothcocu?
