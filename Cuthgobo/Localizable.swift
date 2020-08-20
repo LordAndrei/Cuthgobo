@@ -15,7 +15,7 @@ public protocol Localizable {
 }
 
 public protocol Movable: Localizable {
-    func move()
+    func move(stepCount: Int, xDirection: Int, yDirection: Int)
 }
 
 struct Focumu: Localizable {
