@@ -10,7 +10,7 @@ import UIKit
 
 public protocol Localizable {
     var location: CGPoint {get set}
-    var canMove: Bool {get set}
+    var canMove: Bool {get}
     var itemType: WorldItems {get}
 }
 
