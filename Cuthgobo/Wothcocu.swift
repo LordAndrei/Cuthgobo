@@ -169,6 +169,65 @@ class Wothcocu {
         return (x,y)
     }
     
+    func look(origin:CGPoint,radius:Int,target:WorldItems) -> [(CGPoint,Float)] {
+        var potentials:[Localizable] = []
+        var currentTargets:[(CGPoint, Float)] = []
+        
+        switch target {
+        case .focumu:
+            //get list of food
+            potentials = food
+            
+        case .wacusi:
+            //get list of water
+            potentials = water
+            
+        case .cuthgobo:
+            //get list off cuthgobo
+            potentials = beings
+            
+        default:
+            break
+        }
+        
+        for aTarget in potentials {
+            // Get distance between cuthgobo and a Target in coordinate(|x-y|,|x-y|)
+            let distanceC = CGPoint(x:origin.x - aTarget.location.x,
+                                    y:origin.y - aTarget.location.y)
+            
+            
+            // convert distance to simple float. (3,4) -> 5.0
+            let distanceF: Float = Float.squareRoot(
+                Float(distanceC.x * distanceC.x) +
+                    Float(distanceC.y * distanceC.y))()
+            
+            // make sure distance is within radius
+            if distanceF <= Float(radius) {
+                // get direction
+                let dirX = convertToDirection(distance: distanceC.x)
+                let dirY = convertToDirection(distance: distanceC.y)
+                // add to output list
+                currentTargets.append((CGPoint(x: dirX, y: dirY), distanceF))
+            }
+        }
+        return currentTargets
+    }
+    
+    func convertToDirection(distance: CGFloat) -> Int {
+        // convert distanceC to a direction
+        // if the number is negative then -1
+        // if the number is positive then 1
+        // if the number is zero... then... well.. zero
+        let dist = Int(distance)
+        var dir = 0
+        if dist < 0 {
+            dir = -1
+        } else if dist > 0 {
+            dir = 1
+        }
+        return dir
+    }
+    
     func printWorld() {
         for y in minSize..<maxSize {
             var printString: [String] = ["","","","",""]
