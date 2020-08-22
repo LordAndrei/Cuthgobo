@@ -12,6 +12,12 @@ import UIKit
 let worldMin = 0
 let worldMax = 5
 
+enum CuthgoboState {
+    case hungry
+    case thirsty
+    case needy
+}
+
 class Cuthgobo: Movable {
     // MARK: - Localizable
     var canMove = true
@@ -24,6 +30,7 @@ class Cuthgobo: Movable {
     var reproUrge: Float = 0.0
     var canGiveBirth: Bool = true
     var alive: Bool = false
+    var currentState: CuthgoboState = .thirsty
     weak var wothcocu: Wothcocu?
     
     func doSomething() {
@@ -31,6 +38,14 @@ class Cuthgobo: Movable {
         if hunger <= 0 || thirst <= 0 {
             die()
         }
+        currentState = myPriority()
+
+        // ask world what is within sensory radius.
+        look()
+        // get direction of state target
+        // if result == nil move randomly
+        // else move to target
+
         // for now we're randomly going to walk or 1 in 4 chance jump.
         let random = Int(arc4random()) % 4
         if random != 0 {
@@ -38,6 +53,20 @@ class Cuthgobo: Movable {
         } else {
             jumpRandomly()
         }
+    }
+    
+    func myPriority() -> CuthgoboState {// Some State
+        var state: CuthgoboState = .thirsty
+        
+        if hunger > thirst {
+            state = .hungry
+        }
+        
+        if reproUrge > hunger {
+            state = .needy
+        }
+        
+        return state
     }
     
     func beBorn(whereBorn: CGPoint) {
@@ -146,7 +175,10 @@ class Cuthgobo: Movable {
         print ("slurp, now I am only \(thirst)% thirsty")
     }
     
-    func look() {}
+    // ask world what is within sensory radius.
+    func look() {
+    }
+    
     func reproduce() {}
     
     func die() {
