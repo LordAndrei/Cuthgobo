@@ -9,9 +9,6 @@
 import Foundation
 import UIKit
 
-let worldMin = 0
-let worldMax = 5
-
 enum CuthgoboState {
     case hungry
     case thirsty
@@ -31,7 +28,7 @@ class Cuthgobo: Movable {
     var canGiveBirth: Bool = true
     var alive: Bool = false
     var currentState: CuthgoboState = .thirsty
-    weak var wothcocu: Wothcocu?
+    weak var wothcocu: Wothcocu!
     
     func doSomething() {
         guard alive else { return }
@@ -153,16 +150,7 @@ class Cuthgobo: Movable {
     }
     
     func isSafe() -> Bool {
-        let x = Int(location.x)
-        let y = Int(location.y)
-        guard x >= worldMin,
-              x <= worldMax,
-              y >= worldMin,
-              y <= worldMax
-              else {
-            return false
-        }
-        return true
+        return wothcocu.isSafe(location: location)
     }
     
     func eat() {

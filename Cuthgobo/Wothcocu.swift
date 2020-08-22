@@ -169,6 +169,20 @@ class Wothcocu {
         return (x,y)
     }
     
+    func isSafe(location: CGPoint) -> Bool {
+        let x = Int(location.x)
+        let y = Int(location.y)
+        guard x >= minSize,
+              x <= maxSize,
+              y >= minSize,
+              y <= maxSize
+              else {
+            return false
+        }
+        return true
+    }
+
+    
     /// Look turns information about the Cuthgobo into information about local available targets
     /// - Parameters:
     ///   - origin: Where the Cuthgobo is
