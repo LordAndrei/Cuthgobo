@@ -169,7 +169,16 @@ class Wothcocu {
         return (x,y)
     }
     
-    func look(origin:CGPoint,radius:Int,target:WorldItems) -> [(CGPoint,Float)] {
+    /// Look turns information about the Cuthgobo into information about local available targets
+    /// - Parameters:
+    ///   - origin: Where the Cuthgobo is
+    ///   - radius: How far it can see
+    ///   - target: What it is going to
+    /// - Returns: A List of [Direction, and Distance] to avaialbe targets
+    func look(origin:CGPoint,
+              radius:Int,
+              target:WorldItems) -> [(CGPoint,Float)] {
+        
         var potentials:[Localizable] = []
         var currentTargets:[(CGPoint, Float)] = []
         
