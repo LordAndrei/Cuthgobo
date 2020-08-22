@@ -38,7 +38,6 @@ class Cuthgobo: Movable {
         currentState = myPriority()
 
         // ask world what is within sensory radius.
-        look()
         let viableTargets = wothcocu.look(origin: self.location,
                                           radius: 2,
                                           target: targetForPriority(priority: currentState))
@@ -181,11 +180,7 @@ class Cuthgobo: Movable {
         thirst -= 20
         print ("slurp, now I am only \(thirst)% thirsty")
     }
-    
-    // ask world what is within sensory radius.
-    func look() {
-    }
-    
+        
     func reproduce() {}
     
     func die() {
