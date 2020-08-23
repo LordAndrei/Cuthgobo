@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-enum CuthgoboState {
+enum CuthgoboState: String {
     case hungry
     case thirsty
     case needy
@@ -66,7 +66,7 @@ class Cuthgobo: Movable {
         if reproUrge > hunger {
             state = .needy
         }
-        
+        print("\(name) is \(state)")
         return state
     }
     
