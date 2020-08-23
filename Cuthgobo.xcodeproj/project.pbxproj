@@ -18,6 +18,7 @@
 		582D95F624E5DBAE00B79132 /* CuthgoboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D95F524E5DBAE00B79132 /* CuthgoboUITests.swift */; };
 		582D960424E5DCDB00B79132 /* Cuthgobo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582D960324E5DCDB00B79132 /* Cuthgobo.swift */; };
 		587CEE1A24F18FCD00DF57D9 /* WothcocuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587CEE1924F18FCD00DF57D9 /* WothcocuTests.swift */; };
+		587CEE1C24F1F64000DF57D9 /* TargetItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587CEE1B24F1F64000DF57D9 /* TargetItem.swift */; };
 		588E049124E82063003E54DF /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588E049024E82063003E54DF /* Localizable.swift */; };
 		DF326FCF24E72A3500E81088 /* Wothcocu.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF326FCE24E72A3500E81088 /* Wothcocu.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		582D95F724E5DBAE00B79132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		582D960324E5DCDB00B79132 /* Cuthgobo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuthgobo.swift; sourceTree = "<group>"; };
 		587CEE1924F18FCD00DF57D9 /* WothcocuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WothcocuTests.swift; sourceTree = "<group>"; };
+		587CEE1B24F1F64000DF57D9 /* TargetItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetItem.swift; sourceTree = "<group>"; };
 		588E049024E82063003E54DF /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		DF326FCE24E72A3500E81088 /* Wothcocu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wothcocu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				582D95DA24E5DBAD00B79132 /* GameViewController.swift */,
 				582D960324E5DCDB00B79132 /* Cuthgobo.swift */,
 				DF326FCE24E72A3500E81088 /* Wothcocu.swift */,
+				587CEE1B24F1F64000DF57D9 /* TargetItem.swift */,
 				588E049024E82063003E54DF /* Localizable.swift */,
 				582D95DC24E5DBAD00B79132 /* Main.storyboard */,
 				582D95DF24E5DBAE00B79132 /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				582D960424E5DCDB00B79132 /* Cuthgobo.swift in Sources */,
+				587CEE1C24F1F64000DF57D9 /* TargetItem.swift in Sources */,
 				582D95D924E5DBAD00B79132 /* GameScene.swift in Sources */,
 				582D95DB24E5DBAD00B79132 /* GameViewController.swift in Sources */,
 				582D95D324E5DBAD00B79132 /* AppDelegate.swift in Sources */,
