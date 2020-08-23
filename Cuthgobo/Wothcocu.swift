@@ -165,13 +165,13 @@ class Wothcocu {
     ///   - origin: Where the Cuthgobo is
     ///   - radius: How far it can see
     ///   - target: What it is going to
-    /// - Returns: A List of [Direction, and Distance] to avaialbe targets
+    /// - Returns: A List of [Direction, and Distance] to avaiable targets
     func look(origin:CGPoint,
               radius:Int,
-              target:WorldItems) -> [(CGPoint,Float)] {
+              target:WorldItems) -> [TargetItem] {
         
         var potentials:[Localizable] = []
-        var currentTargets:[(CGPoint, Float)] = []
+        var currentTargets:[TargetItem] = []
         
         switch target {
         case .focumu:
@@ -191,23 +191,28 @@ class Wothcocu {
         }
         
         for aTarget in potentials {
-            // Get distance between cuthgobo and a Target in coordinate(|x-y|,|x-y|)
+            // Get distance between cuthgobo and a Target in coordinate(xc-xt,yc-yt)
             let distanceC = CGPoint(x:origin.x - aTarget.location.x,
                                     y:origin.y - aTarget.location.y)
             
             
             // convert distance to simple float. (3,4) -> 5.0
-            let distanceF: Float = Float.squareRoot(
-                Float(distanceC.x * distanceC.x) +
-                    Float(distanceC.y * distanceC.y))()
+            let distanceF =
+                (Float(distanceC.x * distanceC.x) +
+                 Float(distanceC.y * distanceC.y))
+                .squareRoot()
             
             // make sure distance is within radius
             if distanceF <= Float(radius) {
                 // get direction
                 let dirX = convertToDirection(distance: distanceC.x)
                 let dirY = convertToDirection(distance: distanceC.y)
+                
+                // make a new targetItem
+                let targetItem = TargetItem(direction: CGPoint(x: dirX, y: dirY),
+                                            distance: distanceF)
                 // add to output list
-                currentTargets.append((CGPoint(x: dirX, y: dirY), distanceF))
+                currentTargets.append(targetItem)
             }
         }
         return currentTargets
