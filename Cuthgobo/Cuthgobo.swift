@@ -21,6 +21,7 @@ class Cuthgobo: Movable {
     var itemType: WorldItems = .cuthgobo
     var location: CGPoint = .zero
 
+    var sightRadius = 2
     var name: String = "Unnamed"
     var hunger: Float = 0.0
     var thirst: Float = 0.0
@@ -39,8 +40,9 @@ class Cuthgobo: Movable {
 
         // ask world what is within sensory radius.
         let viableTargets = wothcocu.look(origin: self.location,
-                                          radius: 2,
-                                          target: targetForPriority(priority: currentState))
+                                          radius: sightRadius,
+                                          target: targetForPriority())
+
         // get direction of closest target
         // if result == nil move randomly
         // else move to target
@@ -68,7 +70,11 @@ class Cuthgobo: Movable {
         return state
     }
     
-    func targetForPriority(priority: CuthgoboState) -> WorldItems {
+    func targetForPriority() -> WorldItems {
+        return Cuthgobo.targetForPriority(priority: currentState)
+    }
+    
+    static func targetForPriority(priority: CuthgoboState) -> WorldItems {
         var returnTarget: WorldItems = .empty
         
         switch priority {
