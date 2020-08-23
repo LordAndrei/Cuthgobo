@@ -44,6 +44,10 @@ class Cuthgobo: Movable {
                                           target: targetForPriority())
 
         // get direction of closest target
+        let sortedTargets = viableTargets.sorted { (item1, item2) -> Bool in
+            item1.distance > item2.distance
+        }
+        
         // if result == nil move randomly
         // else move to target
 
