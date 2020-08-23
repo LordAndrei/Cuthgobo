@@ -30,14 +30,16 @@ class Wothcocu {
     // Wacusi: Water Cuthgobo Sip
     
     func beBorn() {
-        clearLand()
         for _ in 1...3 {
-        createWater()
+            createWater()
         }
         for _ in 1...10 {
             growNewFood()
         }
-        createBeings()
+        for _ in 1...initialBeings {
+            createBeings()
+        }
+        updateLand()
         printWorld()
     }
     
@@ -91,13 +93,8 @@ class Wothcocu {
         let (x,y) = getLocation()
         let aLocation = CGPoint(x: x, y: y)
         let aWacusi = Wacusi(location: aLocation)
-        let anIndexPath = NSIndexPath(row: x, section: y)
         water.append(aWacusi)
-        if population[anIndexPath] == nil {
-            population[anIndexPath] = [.wacusi]
-        } else {
-            population[anIndexPath]!.append(.wacusi)
-        }
+
         for xShift in -1...1 {
             for yShift in -1...1 {
                 if x == 0 && y == 0 {
@@ -122,16 +119,7 @@ class Wothcocu {
                                          y: y + yShift)
                 let aWacusi = Wacusi(location: aLocation)
                 
-                let anIndexPath = NSIndexPath(row: x + xShift,
-                                              section: y + yShift)
                 water.append(aWacusi)
-                
-                if population[anIndexPath] == nil {
-                    population[anIndexPath] = [.wacusi]
-                } else {
-                    population[anIndexPath]!.append(.wacusi)
-                }
-                
             }
         }
     }
@@ -139,28 +127,17 @@ class Wothcocu {
     func growNewFood() {
         let (x,y) = getLocation()
         let aLocation = CGPoint(x: x, y: y)
-        let anIndexPath = NSIndexPath(row: x, section: y)
         let aFocumu = Focumu(location: aLocation)
         food.append(aFocumu)
-        guard population[anIndexPath] != nil else {
-            population[anIndexPath] = [.focumu]
-            return
-        }
-        population[anIndexPath]!.append(.focumu)
-        
     }
     
     func createBeings() {
-        for _ in 1...initialBeings {
-            let (x,y) = getLocation()
-            let aLocation = CGPoint(x: x, y: y)
-            let anIndexPath = NSIndexPath(row: x, section: y)
-            let aCuthgobo = Cuthgobo.init()
-            aCuthgobo.beBorn(whereBorn: aLocation)
-            aCuthgobo.wothcocu = self
-            beings.append(aCuthgobo)
-            population[anIndexPath] = [.cuthgobo]
-        }
+        let (x,y) = getLocation()
+        let aLocation = CGPoint(x: x, y: y)
+        let aCuthgobo = Cuthgobo.init()
+        aCuthgobo.beBorn(whereBorn: aLocation)
+        aCuthgobo.wothcocu = self
+        beings.append(aCuthgobo)
     }
     
     func getLocation() -> (Int, Int) {
